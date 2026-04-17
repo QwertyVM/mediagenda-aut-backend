@@ -3,7 +3,7 @@ Feature: Roles
   Background:
     * url 'https://mediagenda-api-dev.azurewebsites.net'
 
-    * def auth = karate.callSingle('classpath:bdd/auth/role.feature')
+    * def auth = karate.callSingle('classpath:bdd/auth/login.feature')
     * header Authorization = 'Bearer ' + auth.response.token
 
     * def uuidRegex = '^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$'
